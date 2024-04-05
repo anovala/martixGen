@@ -31,9 +31,19 @@ int main(void)
     if(genAndTest(narray,n))
     {
         printMartix(narray,n);
+        free(narray);
+        return 0;
     }
 
-    free(narray);    
+    n++;
 
+    narray = (int *)malloc((n*n)*sizeof(int));
+
+    if(genAndTest(narray,n))
+    {
+        printMartix(narray,n);
+        free(narray);
+    }
+        
     return 0;
 }

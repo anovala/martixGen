@@ -161,9 +161,9 @@ bool genAndTest(int *ptr, int n)
 
     while(1){
         ++time;
-        if(time > 5000) //求解多少次，自己改
+        if(time > n*n*10) //求解多少次，自己改
         {
-            printf("try more than 100 times , exit!\n");
+            printf("try more than %d times , exit!\n",n*n*10);
             return false;
         }    
         
